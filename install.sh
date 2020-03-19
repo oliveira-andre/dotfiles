@@ -19,8 +19,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo 'alias gdf="git diff"' >> ~/.zshrc
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-echo 'installing vim'
-sudo apt-get install vim -y
+echo 'installing VIM'
+sudo chmod +777 ./vim/install
+./vim/install
 
 echo 'installing vscode'
 wget "https://az764295.vo.msecnd.net/stable/c47d83b293181d9be64f27ff093689e8e7aed054/code_1.42.1-1581432938_amd64.deb"
@@ -80,7 +81,6 @@ mongo:latest
 
 echo 'installing docker-compose'
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
 
 echo 'installing ruby'
 sudo apt install curl
