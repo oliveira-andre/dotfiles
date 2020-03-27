@@ -27,7 +27,6 @@ set nowritebackup " only in case you don't want a backup file while editing
 set noswapfile " no swap files
 set path+=** " find paths and subpaths dynamicaly
 set wildmenu " show many options
-set mouse=a " accept mouse click
 
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
