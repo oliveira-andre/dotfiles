@@ -122,5 +122,14 @@ sudo add-apt-repository ppa:kisak/kisak-mesa
 sudo apt dist-upgrade
 sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:i386
 
+echo 'installing googler'
+sudo apt-get install googler -y
+
+echo 'installing typora'
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+sudo apt-get install typora
+
 
 echo 'yey you are awesome, now you can use a good linux and be happy'
