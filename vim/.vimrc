@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-colorscheme dracula
+colorscheme Tomorrow-Night-Eighties
 filetype plugin indent on " identify the type of archive  
 syntax on " color editor 
 

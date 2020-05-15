@@ -13,4 +13,4 @@ if ! mkdir ~/.vim/colors then;
   'the ~/.vim/colors already exists'
 fi
 
-#wget https://raw.githubusercontent.com/chriskempson/vim-tomorrow-theme/master/colors/Tomorrow-Night-Eighties.vim -P ~/.vim/colors
+wget https://raw.githubusercontent.com/chriskempson/vim-tomorrow-theme/master/colors/Tomorrow-Night-Eighties.vim -P ~/.vim/colors
