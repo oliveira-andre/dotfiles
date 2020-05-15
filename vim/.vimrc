@@ -6,9 +6,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'zivyangll/git-blame.vim'
 Plug 'tpope/vim-rails'
+Plug 'storyn26383/vim-vue'
+Plug 'preservim/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme dracula
 filetype plugin indent on " identify the type of archive  
 syntax on " color editor 
 
@@ -27,6 +32,4 @@ set nowritebackup " only in case you don't want a backup file while editing
 set noswapfile " no swap files
 set path+=** " find paths and subpaths dynamicaly
 set wildmenu " show many options
-
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
