@@ -13,7 +13,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme dracula
+set background=dark
+
 filetype plugin indent on " identify the type of archive  
 syntax on " color editor 
 
@@ -32,4 +34,13 @@ set nowritebackup " only in case you don't want a backup file while editing
 set noswapfile " no swap files
 set path+=** " find paths and subpaths dynamicaly
 set wildmenu " show many options
+
+let mapleader = " "
+
+" remap keys
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>nt :NERDTree<CR>
 
