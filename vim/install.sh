@@ -1,14 +1,12 @@
-sudo apt-get install vim -y
+sudo apt-get install neovim -y
+echo "alias vim=nvim" >> ~/.zshrc
 
-mv ./.vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
+mv ./.vimrc ~/.config/nvim/init.vim
 
-if ! mkdir ~/.vim; then
-  echo 'the ~/.vim folder already exists'
-fi
-
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if ! mkdir ~/.vim/colors then;
+if ! mkdir ~/.config/nvim/colors then;
   'the ~/.vim/colors already exists'
 fi
