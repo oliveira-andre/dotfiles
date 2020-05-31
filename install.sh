@@ -14,9 +14,11 @@ echo 'installing git'
 sudo apt-get install git -y
 
 echo 'installing zsh'
-sudo apt-get install zsh curl -y
+sudo apt-get install zsh tmux curl -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo 'alias gdf="git diff"' >> ~/.zshrc
+echo 'echo $(git config --global user.email)' >> ~/.zshrc
+echo 'tmux' >> ~/.zshrc
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 echo 'installing VIM'
@@ -101,8 +103,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.zshrc
 exec $SHELL
 
-rbenv install 2.7.0
-rbenv global 2.7.0
+rbenv install 2.7.1
+rbenv global 2.7.1
 ruby -v
 
 echo 'installing rails'
@@ -113,6 +115,7 @@ rails -v
 echo 'creating dev folders'
 mkdir ~/rails_apps
 mkdir ~/react_apps
+mkdir ~/node_apps
 
 echo 'installing steam'
 sudo apt-get install steam -y
