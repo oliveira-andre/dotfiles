@@ -18,6 +18,8 @@ call plug#end()
 colorscheme dracula
 set background=dark
 
+let g:dracula_italic = 0 " fix bug classes background highlight
+
 filetype plugin indent on " identify the type of archive  
 syntax on " color editor 
 
