@@ -40,6 +40,7 @@ set path+=** " find paths and subpaths dynamicaly
 set wildmenu " show many options
 
 let mapleader = " "
+let NERDTreeShowLineNumbers = 1
 
 " remap keys
 nnoremap <leader>h :wincmd h<CR>
