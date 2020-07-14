@@ -48,4 +48,5 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>nh :noh<CR>
 
