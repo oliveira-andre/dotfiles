@@ -1,7 +1,5 @@
 " vim-plug plugins
 call plug#begin('~/.vim/plugged')
-Plug 'mattn/emmet-vim'
-Plug 'preservim/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
@@ -9,7 +7,11 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'tpope/vim-rails'
 Plug 'storyn26383/vim-vue'
 Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'dense-analysis/ale'
+Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -20,7 +22,7 @@ set background=dark
 
 let g:dracula_italic = 0 " fix bug classes background highlight
 
-filetype plugin indent on " identify the type of archive  
+filetype indent plugin on " identify the type of archive  
 syntax on " color editor 
 
 " ident size
