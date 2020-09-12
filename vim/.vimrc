@@ -14,13 +14,14 @@ Plug 'preservim/nerdcommenter'
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-colorscheme dracula
-set background=dark
+packadd! dracula_pro
 
+let g:dracula_colorterm = 0
 let g:dracula_italic = 0 " fix bug classes background highlight
+
+colorscheme dracula_pro
 
 filetype indent plugin on " identify the type of archive  
 syntax on " color editor 
