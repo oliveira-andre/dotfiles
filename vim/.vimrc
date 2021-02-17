@@ -45,11 +45,25 @@ set wildmenu " show many options
 let mapleader = " "
 let NERDTreeShowLineNumbers = 1
 
-" remap keys
+" remap navigation cursor screen keys
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+
+" Open or refresh nerdtree
 nnoremap <leader>nt :NERDTree<CR>
+
+" remove highlight after search
 nnoremap <leader>nh :noh<CR>
 
+" Manage tabs
+nnoremap <leader>tn :tabe<CR>
+nnoremap <leader>tc :tabc<CR>
+nnoremap <leader>to :tabo<CR>
+
+" Manage buffers
+nnoremap <leader>bfs :buffers<CR>
+nnoremap <leader>bf :buffer
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bp :bp<CR>
