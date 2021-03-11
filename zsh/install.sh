@@ -10,5 +10,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo '🎉 downloadig completions zsh plugin'
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
-echo 'alias gdf="git diff"' >> ~/.zshrc
-echo 'echo $(git config --global user.email)' >> ~/.zshrc
+echo 'adding content to .zshrc'
+mv ./.zshrc ~/.zshrc
