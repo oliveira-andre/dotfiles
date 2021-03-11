@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ $(id -u) -eq 0 ]]
-  then echo "please don't run as SUDO"
+if [[ $(id -u) -eq 1 ]]
+  then echo "please run with SUDO"
   exit 1
 fi
 
@@ -14,12 +14,8 @@ echo 'installing git'
 sudo apt-get install git -y
 
 echo 'installing zsh'
-sudo apt-get install zsh tmux curl -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo 'alias gdf="git diff"' >> ~/.zshrc
-echo 'echo $(git config --global user.email)' >> ~/.zshrc
-echo 'tmux' >> ~/.zshrc
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+sudo chmod +777 ./zsh/install
+./zsh/install
 
 echo 'installing VIM'
 sudo chmod +777 ./vim/install
