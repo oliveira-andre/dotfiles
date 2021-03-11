@@ -14,8 +14,21 @@ alias node_apps="cd ~/node_apps"
 alias vim="nvim"
 alias gdf="git diff"
 alias gconf_email="git config user.email $1"
+alias rails_apps="cd ~/rails_apps"
+alias react_apps="cd ~/react_apps"
+alias node_apps="cd ~/node_apps"
 
 echo $(gconf_email)
+
+# Misc
+
+ipinfo(){
+  curl http://ipinfo.io/$1 | jq
+}
+
+certnmap(){
+  curl https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1  | nmap -T5 -Pn -sS -i - -$
+}
 
 SPACESHIP_CHAR_SYMBOL="🎩  ➜"
 SPACESHIP_CHAR_SUFFIX=" "
