@@ -6,18 +6,23 @@ plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+
 alias vim="nvim"
-alias gdf="git diff"
-alias rails_apps="cd ~/rails_apps"
-alias react_apps="cd ~/react_apps"
-alias node_apps="cd ~/node_apps"
-alias vim="nvim"
+
 alias gdf="git diff"
 alias gconf_email="git config user.email $1"
+alias gconf_name="git config user.name $1"
+
+alias gau="$HOME/go/bin/gau"
+
 alias rails_apps="cd ~/rails_apps"
 alias react_apps="cd ~/react_apps"
 alias node_apps="cd ~/node_apps"
 
+alias worldmap="telnet mapscii.me"
+alias shitfox="telnet towel.blinkenlights.nl"
+
+screenfetch
 echo $(gconf_email)
 
 # Misc
